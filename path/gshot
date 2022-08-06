@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# runnable grim (screengrim) should be installed and added to path
+
+FILENAME="screenshot-`date +%F-%T`"
+grim -g "$(slurp)" ~/Pictures/GCaptures/$FILENAME.png
+
