@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nmcli dev wifi rescan
+# rescan the surrounding
+
+nmtui
+# open configuration in terminal
+
