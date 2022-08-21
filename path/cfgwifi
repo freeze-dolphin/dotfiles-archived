@@ -3,6 +3,6 @@
 nmcli dev wifi rescan
 # rescan the surrounding
 
-nmtui
+nmtui connect
 # open configuration in terminal
 

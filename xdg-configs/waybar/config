@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "pulseaudio"],
+    "modules-left": ["tray", "sway/workspaces", "custom/media", "cpu", "memory", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock"],
+    "modules-right": ["keyboard-state", "network", "pulseaudio", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -80,10 +80,10 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": true
+        "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -141,7 +141,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "exec alsamixer -e alsamixer"
     },
     "custom/media": {
         "format": "{icon} {}",
