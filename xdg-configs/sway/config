@@ -25,8 +25,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/wall.png fill
-#exec mpvpaper DP-2 /cgo/crt/Wallpapers/431960/2810342378/1080@60.mp4
+output * bg ~/.config/sway/walls/815566.png fit
 
 #
 # Example configuration:
@@ -41,7 +40,7 @@ exec swaymsg "workspace 3; exec alacritty;"
 exec swaymsg "workspace 2; exec firefox;"
 exec swaymsg "workspace 1;"
 
-exec ibus-daemon 
+exec ibus-daemon -dr
 exec --no-startup-id ~/.config/sway/alternating_layouts.py
 
 ### Set floating by default
@@ -96,6 +95,9 @@ exec swayidle -w \
 
 	# Volume Control
 	bindsym $mod+Shift+o exec amt
+
+	# IBus support
+	bindsym Ctrl+space exec sh -c 'if [ "$(ibus engine)" = "anthy" ]; then ibus engine rime; else ibus engine anthy; fi'
 
 #
 # Basics:
