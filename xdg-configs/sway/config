@@ -97,7 +97,7 @@ exec swayidle -w \
 	bindsym $mod+Shift+o exec amt
 
 	# IBus support
-	bindsym Ctrl+space exec sh -c 'if [ "$(ibus engine)" = "anthy" ]; then ibus engine rime; else ibus engine anthy; fi'
+	#bindsym Ctrl+space exec sh -c 'if [ "$(ibus engine)" = "anthy" ]; then ibus engine rime; else ibus engine anthy; fi'
 
 #
 # Basics:
