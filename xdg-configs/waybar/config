@@ -125,7 +125,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -141,7 +141,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "exec alsamixer -e alsamixer"
+        "on-click": "amt"
     },
     "custom/media": {
         "format": "{icon} {}",

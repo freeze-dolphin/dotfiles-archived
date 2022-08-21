@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: FontAwesome, JetBrainsMono, Sarasa Gothic SC, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
 }
 
 window#waybar {
@@ -24,15 +24,6 @@ window#waybar.solo {
     background-color: #FFFFFF;
 }
 */
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
 
 #workspaces button {
     padding: 0 5px;
@@ -62,7 +53,8 @@ window#waybar.chromium {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    /* border-bottom: 3px solid #ffffff; */
+    border-radius: 25px;
 }
 
 #clock,
@@ -81,6 +73,7 @@ window#waybar.chromium {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+    border-radius: 25px;
 }
 
 #window,
@@ -159,7 +152,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: #76adf1;
     color: #000000;
 }
 
