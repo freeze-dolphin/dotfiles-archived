@@ -5,7 +5,12 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["tray", "sway/workspaces", "custom/media", "cpu", "memory", "sway/mode"],
+	// "margin-top": -10,
+	// "margin-bottom": 0,
+	// "margin-right": 100,
+	// "margin-left": 100,
+	
+    "modules-left": ["tray", "custom/media", "cpu", "memory", "sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["keyboard-state", "network", "pulseaudio", "clock"],
     // Modules configuration
@@ -74,16 +79,20 @@
         "spacing": 10
     },
     "clock": {
+    	"interval": 1,
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+		"format": "<span color=\"#88c0d0\"></span>  {:%H:%M:%S}",
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "<span color=\"#88c0d0\"></span>  {:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": " {usage}%",
+        "tooltip": false,
+        "min-length": 4,
     },
     "memory": {
-        "format": "{}%  "
+        "format": "{}%  ",
+        "min-length": 4,
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -116,21 +125,22 @@
         "bat": "BAT2"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "   {essid} ",
+        "tooltip": false,
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected",
+        "format-disabled": "Disabled",
+		"format-alt": " {ipaddr} / {cidr} "
+        // "on-click": "alacritty -e cfgwifi",
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format": "{volume}% {icon}  / {format_source}",
+        "format-bluetooth": "{volume}% {icon}   / {format_source}",
+        "format-bluetooth-muted": "  {icon}   / {format_source}",
+        "format-muted": " / {format_source}",
+        "format-source": "{volume}%  ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -141,7 +151,10 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "amt"
+        "on-click": "amixer set Master toggle && amixer set Capture toggle",
+        "on-click-right": "amixer set Capture toggle",
+        "on-click-middle": "alacritty --class floating -e pulsemixer",
+        "min-length": 13,
     },
     "custom/media": {
         "format": "{icon} {}",

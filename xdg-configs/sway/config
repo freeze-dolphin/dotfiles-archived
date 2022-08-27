@@ -34,6 +34,11 @@ output * bg ~/.config/sway/walls/815566.png fit
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+### Floative configuration
+for_window [title="Volume Control"] floating enable # pavucontrol
+for_window [title="splash"] floating enable # intellij idea splash
+for_window [title="pulsemixer"] floating enable
+
 ### Autostart configuration
 exec swaymsg "workspace 4; exec qv2ray;"
 exec swaymsg "workspace 3; exec alacritty;"
@@ -43,17 +48,16 @@ exec swaymsg "workspace 1;"
 exec ibus-daemon -dr
 exec --no-startup-id ~/.config/sway/alternating_layouts.py
 
-### Set floating by default
-#for_window [app_id=".*"] floating enable
-#for_window [app_id=".*"] border normal
-
 for_window [app_id="splash"] floating enable
 for_window [app_id="splash"] border normal
 for_window [app_id="idea"] floating enable
 for_window [app_id="idea"] border normal
 
+### Gaps, fonts, borders
+font JetBrainsMono 18
+
 ### Gaps
-gaps inner 2
+gaps inner 0
 
 ### Borders
 default_border pixel 1
