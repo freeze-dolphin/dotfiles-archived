@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# xbps repos
+sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree -y
+sudo xbps-install -S
+
+# basic softwares
+sudo xbps-install git wget curl tmux micro nano alacritty engrampa grim slurp lolcat-c lsof neofetch nemo nomacs ranger vlc unar gimp
+
+# sway
+sudo xbps-install sway gtklock Waybar swaybg  -y
+
+# audio
+sudo xbps-install pulsemixer alsa-tools alsa-utils pavucontrol dmenu -y
+
+# development
+sudo xbps-install gcc make cmake clang -y
+
+# beautifying
+sudo xbps-install wqy-microhei dejavu-fonts-ttf font-awesome font-awesome5 font-awesome6  font-sarasa-gothic noto-fonts-cjk terminus-font freefont-ttf -y
+sudo xbps-install arc-icon-theme arc-theme papirus-icon-theme breeze-icons breeze-gtk emerald-themes -y
+
+# misc
+sudo xbps-install pkg-config bash-completion bubblewrap gparted dosfstools -y
