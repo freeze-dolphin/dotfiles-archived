@@ -2,6 +2,17 @@
 
 # runnable grim (screengrim) should be installed and added to path
 
+if ! [ -x "$(command -v grim)" ]; then
+  echo 'Error: grim is not installed.' >&2
+  exit 1
+fi
+
+if ! [ -x "$(command -v slurp)" ]; then
+  echo 'Error: slurp is not installed.' >&2
+  exit 1
+fi
+
+mkdir -p ~/Pictures/GCaptures
 FILENAME="screenshot-`date +%F-%T`"
 grim -g "$(slurp)" ~/Pictures/GCaptures/$FILENAME.png
 

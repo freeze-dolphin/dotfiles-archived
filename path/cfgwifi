@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if ! [ -x "$(command -v nmcli)" ]; then
+  echo 'Error: nmcli  is not installed.' >&2
+  exit 1
+fi
+
+if ! [ -x "$(command -v nmtui)" ]; then
+  echo 'Error: nmtui is not installed.' >&2
+  exit 1
+fi
+
 nmcli dev wifi rescan
 # rescan the surrounding
 

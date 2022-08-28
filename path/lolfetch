@@ -1,3 +1,9 @@
 #!/bin/bash
 
+if ! [ -x "$(command -v lolcat)" ]; then
+  echo 'Error: lolcat is not installed.' >&2
+  exit 1
+fi
+
+
 neofetch | lolcat -h 0.90 -v 0.70

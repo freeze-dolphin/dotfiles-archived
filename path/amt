@@ -1,3 +1,9 @@
 #!/bin/bash
 
+if ! [ -x "$(command -v alsamixer)" ]; then
+  echo 'Error: alsamixer is not installed.' >&2
+  exit 1
+fi
+
+
 alacritty -e alsamixer
