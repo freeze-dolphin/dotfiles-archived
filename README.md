@@ -1,9 +1,17 @@
 # dotfiles
 
-![](shots/shot4.png)
+![](shots/shot5.png)
+
+![](shots/shot6.png)
+
+---
 
 <details>
   <summary>Previous Screenshots</summary>
+
+![](shots/shot4.png)
+
+---
 
 ![](shots/shot0.png)
 
