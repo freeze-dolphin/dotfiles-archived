@@ -25,7 +25,12 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/walls/815566.png fit
+#output * bg ~/.config/sway/walls/wallhaven-dpqkd3.jpg fill
+#exec swaybg -i ~/.config/sway/walls/wallhaven-dpqkd3.jpg -c 66ccff -m fill
+
+output * {
+	background ~/.config/sway/walls/wallhaven-dpqkd3.jpg fill
+}
 
 #
 # Example configuration:
@@ -34,10 +39,14 @@ output * bg ~/.config/sway/walls/815566.png fit
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+### Xwayland support
+xwayland enable
+
 ### Floative configuration
-for_window [title="Volume Control"] floating enable # pavucontrol
-for_window [title="splash"] floating enable # intellij idea splash
+for_window [title="Volume Control"] floating enable
+for_window [title="splash"] floating enable
 for_window [title="pulsemixer"] floating enable
+for_window [title="Hello Minecraft!*"] floating enable
 
 ### Autostart configuration
 exec swaymsg "workspace 4; exec qv2ray;"
@@ -48,20 +57,19 @@ exec swaymsg "workspace 1;"
 exec ibus-daemon -dr
 exec --no-startup-id ~/.config/sway/alternating_layouts.py
 
-for_window [app_id="splash"] floating enable
-for_window [app_id="splash"] border normal
-for_window [app_id="idea"] floating enable
-for_window [app_id="idea"] border normal
-
 ### Gaps, fonts, borders
-font JetBrainsMono 18
+font JetBrainsMono 10
 
 ### Gaps
 gaps inner 0
 
 ### Borders
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
+
+### client color scheme
+client.focused #6666e6 #6699e6 #ffffff
+client.urgent #ff6969 #ff7474 #ffffff
 
 ### Idle configuration
 #
