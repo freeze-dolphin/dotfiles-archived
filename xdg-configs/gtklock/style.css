@@ -1,5 +1,9 @@
+* {
+	font-family: "Sarasa UI SC";
+}
+
 #window-box {
-	padding: 64px;
+	padding: 20px;
 	border: 1px solid white;
 	border-radius: 4px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
@@ -7,7 +11,7 @@
 }
 
 window {
-	background-image: url("wallhaven-dpqkd3_blurred.jpg");
+	background-image: url("dpqkd3_blurred.jpg");
 	background-position: center;
 	background-size: cover;
 }

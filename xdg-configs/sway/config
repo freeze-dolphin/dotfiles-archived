@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $moda Alt
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -28,7 +29,7 @@ include /etc/sway/config-vars.d/*
 #output * bg ~/.config/sway/walls/wallhaven-dpqkd3.jpg fill
 #exec swaybg -i ~/.config/sway/walls/wallhaven-dpqkd3.jpg -c 66ccff -m fill
 
-output * background ~/.config/sway/walls/wallhaven-dpqkd3.jpg fill
+output * background ~/.config/sway/walls/dpqkd3.jpg fill
 
 #
 # Example configuration:
@@ -42,9 +43,11 @@ xwayland enable
 
 ### Floative configuration
 for_window [title="Volume Control"] floating enable
-for_window [title="splash"] floating enable
+for_window [title="^/(?!Search)splash"] floating enable
 for_window [title="pulsemixer"] floating enable
 for_window [title="Hello Minecraft!*"] floating enable
+for_window [app_id="wlogout"] floating enable
+for_window [app_id="wlogout"] border none
 
 ### Autostart configuration
 exec swaymsg "workspace 4; exec qv2ray;"
@@ -104,13 +107,18 @@ exec swayidle -w \
 	bindsym $mod+Shift+p exec gshot
 
 	# Volume Control
-	bindsym $mod+Shift+o exec pulsemixer
+	bindsym $moda+Shift+m exec pulsemixer --toggle-mute
+	bindsym $moda+Shift+k exec pulsemixer --change-volume +5
+	bindsym $moda+Shift+j exec pulsemixer --change-volume -5
 
 	# IBus support
 	#bindsym Ctrl+space exec sh -c 'if [ "$(ibus engine)" = "anthy" ]; then ibus engine rime; else ibus engine anthy; fi'
 
 	# GTK Lock
-	bindsym $mod+Alt+l exec gtklock -d -c ~/.config/gtklock/config.toml
+	bindsym $mod+Shift+d exec gtklock -d -c ~/.config/gtklock/config.toml
+
+	# wlogout
+	bindsym $mod+Shift+e exec wlogout
 
 #
 # Basics:
@@ -136,7 +144,7 @@ exec swayidle -w \
 	bindsym $mod+Shift+c reload
 
 	# Exit sway (logs you out of your Wayland session)
-	bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+	#bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #

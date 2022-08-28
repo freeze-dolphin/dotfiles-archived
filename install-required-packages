@@ -8,7 +8,7 @@ sudo xbps-install -S
 sudo xbps-install git wget curl tmux micro nano alacritty engrampa grim slurp lolcat-c lsof neofetch nemo nomacs ranger vlc unar gimp
 
 # sway
-sudo xbps-install sway gtklock Waybar swaybg  -y
+sudo xbps-install sway gtklock Waybar swaybg wlogout -y
 
 # audio
 sudo xbps-install pulsemixer alsa-tools alsa-utils pavucontrol dmenu -y
