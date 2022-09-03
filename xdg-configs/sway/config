@@ -19,7 +19,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -fn JetBrainsMono -p "$:" -b| xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -42,12 +42,11 @@ output * background ~/.config/sway/walls/dpqkd3.jpg fill
 xwayland enable
 
 ### Floative configuration
-for_window [title="Volume Control"] floating enable
-for_window [title="^/(?!Search)splash"] floating enable
-for_window [title="pulsemixer"] floating enable
-for_window [title="Hello Minecraft!*"] floating enable
-for_window [app_id="wlogout"] floating enable
-for_window [app_id="wlogout"] border none
+
+## Thanks to `https://regex101.com/`` a lot. ;)
+
+set $floative_exclude ^((?!.*Alacritty|wlogout.*).)*$
+for_window [app_id="$floative_exclude"] floating enable
 
 ### Autostart configuration
 exec swaymsg "workspace 4; exec qv2ray;"
@@ -55,7 +54,7 @@ exec swaymsg "workspace 3; exec alacritty;"
 exec swaymsg "workspace 2; exec firefox;"
 exec swaymsg "workspace 1;"
 
-exec ibus-daemon -dr
+#exec ibus-daemon -dr
 exec --no-startup-id ~/.config/sway/alternating_layouts.py
 
 ### Gaps, fonts, borders

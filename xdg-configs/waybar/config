@@ -131,8 +131,8 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected",
         "format-disabled": "Disabled",
-		"format-alt": " {ipaddr} / {cidr} "
-        // "on-click": "alacritty -e cfgwifi",
+		"format-alt": " {ipaddr} / {cidr} ",
+        "on-click-middle": "alacritty --class cfgwifi -e cfgwifi",
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
@@ -153,8 +153,8 @@
         },
         "on-click": "amixer set Master toggle && amixer set Capture toggle",
         "on-click-right": "amixer set Capture toggle",
-        "on-click-middle": "alacritty --class floating -e pulsemixer",
-        "min-length": 13,
+        "on-click-middle": "alacritty --class pulsemixer -e pulsemixer",
+        "min-length": 15,
     },
     "custom/media": {
         "format": "{icon} {}",
