@@ -88,11 +88,11 @@
     "cpu": {
         "format": " {usage}%",
         "tooltip": false,
-        "min-length": 4,
+        "min-length": 5,
     },
     "memory": {
         "format": "{}%  ",
-        "min-length": 4,
+        "min-length": 5,
     },
     "temperature": {
         // "thermal-zone": 2,

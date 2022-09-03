@@ -21,4 +21,4 @@ sudo xbps-install wqy-microhei dejavu-fonts-ttf font-awesome font-awesome5 font-
 sudo xbps-install arc-icon-theme arc-theme papirus-icon-theme breeze-icons breeze-gtk emerald-themes -y
 
 # misc
-sudo xbps-install pkg-config bash-completion bubblewrap gparted dosfstools -y
+sudo xbps-install pkg-config bash-completion bubblewrap gparted dosfstools v2ray nscd -y

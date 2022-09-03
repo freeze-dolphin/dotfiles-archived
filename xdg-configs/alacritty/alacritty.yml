@@ -1,35 +1,34 @@
 window:
   opacity: 0.8
 
-# Colors (MaterialDarker)
+# Colors (Monokai-Pro)
 colors:
-  bright:
-    black: '#545454'
-    blue: '#82aaff'
-    cyan: '#89ddff'
-    green: '#c3e88d'
-    magenta: '#c792ea'
-    red: '#ff5370'
-    white: '#ffffff'
-    yellow: '#ffcb6b'
-  cursor:
-    cursor: '#ffffff'
-    text: '#ffffff'
-  normal:
-    black: '#000000'
-    blue: '#82aaff'
-    cyan: '#89ddff'
-    green: '#c3e88d'
-    magenta: '#c792ea'
-    red: '#ff5370'
-    white: '#ffffff'
-    yellow: '#ffcb6b'
+  # Default colors
   primary:
-    background: '#212121'
-    foreground: '#eeffff'
-  selection:
-    background: '#eeffff'
-    text: '#545454'
+    background: '0x2D2A2E'
+    foreground: '0xfff1f3'
+
+  # Normal colors
+  normal:
+    black:   '0x2c2525'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+
+  # Bright colors
+  bright:
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
 
 # Font configuration
 font:
