@@ -47,6 +47,7 @@ xwayland enable
 
 set $floative_exclude ^((?!.*Alacritty|wlogout.*).)*$
 for_window [app_id="$floative_exclude"] floating enable
+for_window [app_id="$floative_exclude"] border normal
 
 ### Autostart configuration
 exec swaymsg "workspace 4; exec qv2ray;"
