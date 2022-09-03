@@ -14,7 +14,7 @@ sudo xbps-install sway gtklock Waybar swaybg wlogout -y
 sudo xbps-install pulsemixer alsa-tools alsa-utils pavucontrol dmenu -y
 
 # development
-sudo xbps-install gcc make cmake clang -y
+sudo xbps-install base-devel gcc make cmake clang -y
 
 # beautifying
 sudo xbps-install wqy-microhei dejavu-fonts-ttf font-awesome font-awesome5 font-awesome6  font-sarasa-gothic noto-fonts-cjk terminus-font freefont-ttf -y

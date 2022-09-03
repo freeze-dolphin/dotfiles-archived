@@ -120,6 +120,39 @@ exec swayidle -w \
 	# wlogout
 	bindsym $mod+Shift+e exec wlogout
 
+	# extra workspa
+	## Switch to workspace
+	bindsym $moda+1 workspace number 11
+	bindsym $moda+2 workspace number 12
+	bindsym $moda+3 workspace number 13
+	bindsym $moda+4 workspace number 14
+	bindsym $moda+5 workspace number 15
+	bindsym $moda+6 workspace number 16
+	bindsym $moda+7 workspace number 17
+	bindsym $moda+8 workspace number 18
+	bindsym $moda+9 workspace number 19
+	bindsym $moda+0 workspace number 20
+	bindsym $moda+Ctrl+0 workspace number 21
+	bindsym $moda+Ctrl+1 workspace number 22
+	bindsym $moda+Ctrl+2 workspace number 23
+	bindsym $moda+Ctrl+3 workspace number 24
+	
+	## Move focused container to workspace
+	bindsym $moda+Shift+1 move container to workspace number 11
+	bindsym $moda+Shift+2 move container to workspace number 12
+	bindsym $moda+Shift+3 move container to workspace number 13
+	bindsym $moda+Shift+4 move container to workspace number 14
+	bindsym $moda+Shift+5 move container to workspace number 15
+	bindsym $moda+Shift+6 move container to workspace number 16
+	bindsym $moda+Shift+7 move container to workspace number 17
+	bindsym $moda+Shift+8 move container to workspace number 18
+	bindsym $moda+Shift+9 move container to workspace number 19
+	bindsym $moda+Shift+0 move container to workspace number 20
+	bindsym $moda+Ctrl+Shift+0 move container to workspace number 21
+	bindsym $moda+Ctrl+Shift+1 move container to workspace number 22
+	bindsym $moda+Ctrl+Shift+2 move container to workspace number 23
+	bindsym $moda+Ctrl+Shift+3 move container to workspace number 24
+
 #
 # Basics:
 #
