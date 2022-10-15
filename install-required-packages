@@ -5,20 +5,23 @@ sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfre
 sudo xbps-install -S
 
 # basic softwares
-sudo xbps-install git wget curl tmux micro nano alacritty engrampa grim slurp lolcat-c lsof neofetch nemo nomacs ranger vlc unar gimp
+sudo xbps-install git wget curl tmux micro nano engrampa grim slurp lolcat-c lsof neofetch ranger vlc unar gimp menulibre shotwell -y
 
 # sway
-sudo xbps-install sway gtklock Waybar swaybg wlogout -y
+#sudo xbps-install sway gtklock Waybar swaybg wlogout dmenu -y
 
 # audio
-sudo xbps-install pulsemixer alsa-tools alsa-utils pavucontrol dmenu -y
+sudo xbps-install pulsemixer alsa-tools alsa-utils pavucontrol -y
 
 # development
 sudo xbps-install base-devel gcc make cmake clang -y
 
 # beautifying
 sudo xbps-install wqy-microhei dejavu-fonts-ttf font-awesome font-awesome5 font-awesome6  font-sarasa-gothic noto-fonts-cjk terminus-font freefont-ttf -y
-sudo xbps-install arc-icon-theme arc-theme papirus-icon-theme breeze-icons breeze-gtk emerald-themes -y
+sudo xbps-install arc-icon-theme arc-theme papirus-icon-theme -y
+echo "go `https://github.com/EliverLara/Nordic` for the nordic theme"
 
 # misc
-sudo xbps-install pkg-config bash-completion bubblewrap gparted dosfstools v2ray nscd -y
+sudo xbps-install pkg-config bash-completion bubblewrap gparted dosfstools v2ray nscd avahi fbv grub-customizer ifuse -y
+
+echo "now please enable 'avahi' service"
